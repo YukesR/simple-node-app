@@ -1,1 +1,18 @@
 
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Replace with your desired Node.js version
+    commands:
+      - npm install  # Install dependencies
+
+  build:
+    commands:
+      - npm run lint  # Run ESLint to lint your code
+      # Add other build commands as needed, such as compiling TypeScript, bundling assets, etc.
+
+artifacts:
+  files:
+    - '**/*' 
